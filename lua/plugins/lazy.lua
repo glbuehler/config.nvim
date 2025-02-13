@@ -1,13 +1,21 @@
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    require('plugins.lspconfig'),
-    require('plugins.conform'),
     require('plugins.cmp'),
-
-    'nvim-treesitter/nvim-treesitter',
-    'williamboman/mason.nvim',
-    'nvim-lualine/lualine.nvim',
-    'lewis6991/gitsigns.nvim',
+    require('plugins.conform'),
+    require('plugins.gitsigns'),
+    require('plugins.lspconfig'),
+    require('plugins.lualine'),
+    require('plugins.mason'),
+    require('plugins.mason_tool_installer'),
+    require('plugins.telescope'),
+    require('plugins.treesitter'),
+    {
+        'folke/todo-comments.nvim',
+        event = 'VimEnter',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        opts = { signs = false },
+    },
 })

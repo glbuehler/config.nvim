@@ -1,5 +1,19 @@
-require('lualine').setup({
-    options = {
-        theme = 'iceberg_dark',
+local path = function()
+    if vim.api.nvim_buf_get_option(0, 'filetype') == 'netrw' then
+        return vim.b.netrw_curdir
+    else
+        return vim.fn.expand('%:t')
+    end
+end
+
+return {
+    'nvim-lualine/lualine.nvim',
+    opts = {
+        options = {
+            theme = 'gruvbox-material',
+        },
+        sections = {
+            lualine_c = { path },
+        },
     },
-})
+}
