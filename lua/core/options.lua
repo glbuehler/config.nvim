@@ -1,4 +1,3 @@
-
 vim.g.mapleader = ' '
 
 vim.g.maplocalleader = ' '
@@ -6,7 +5,6 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 vim.g.netrw_banner = 0
-
 
 vim.opt.number = true
 
@@ -28,6 +26,5 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- can increase startup time if not scheduled
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+    vim.opt.clipboard = 'unnamedplus'
 end)
-
