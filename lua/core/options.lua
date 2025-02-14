@@ -1,3 +1,4 @@
+-- vim.g
 vim.g.mapleader = ' '
 
 vim.g.maplocalleader = ' '
@@ -6,6 +7,7 @@ vim.g.have_nerd_font = true
 
 vim.g.netrw_banner = 0
 
+-- vim.opt
 vim.opt.number = true
 
 vim.opt.relativenumber = true
@@ -27,5 +29,5 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- can increase startup time if not scheduled
 vim.schedule(function()
     vim.opt.clipboard = 'unnamedplus'
-    vim.cmd('colo habamax')
+    vim.cmd('colorscheme my-habamax')
 end)
