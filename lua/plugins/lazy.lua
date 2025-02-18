@@ -23,4 +23,8 @@ require('lazy').setup({
         event = 'InsertEnter',
         config = true,
     },
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+    },
 })

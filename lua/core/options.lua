@@ -31,5 +31,5 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- can increase startup time if not scheduled
 vim.schedule(function()
     vim.opt.clipboard = 'unnamedplus'
-    vim.cmd('colorscheme my-habamax')
+    vim.cmd('colorscheme tokyonight-night')
 end)
