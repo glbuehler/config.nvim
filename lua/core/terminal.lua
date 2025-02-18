@@ -15,14 +15,18 @@ local opts = {
 
 local toggle_terminal = function()
     if not vim.api.nvim_buf_is_valid(buf) then
+        print('creating new buf')
         buf = vim.api.nvim_create_buf(false, true)
     end
 
     if vim.api.nvim_win_is_valid(win) then
+        print('win valid')
         vim.api.nvim_win_hide(win)
     else
         win = vim.api.nvim_open_win(buf, true, opts)
-        vim.cmd.terminal()
+        if vim.bo[buf].buftype ~= 'terminal' then
+            vim.cmd.terminal()
+        end
         vim.cmd.startinsert()
     end
 end
