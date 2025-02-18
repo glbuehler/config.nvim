@@ -10,7 +10,7 @@ return {
     'nvim-lualine/lualine.nvim',
     opts = {
         options = {
-            theme = 'gruvbox-material',
+            theme = 'auto',
         },
         sections = {
             lualine_c = { path },
