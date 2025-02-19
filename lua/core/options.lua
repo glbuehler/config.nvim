@@ -7,6 +7,9 @@ vim.g.have_nerd_font = true
 
 vim.g.netrw_banner = 0
 
+-- prevent delay of <C-c> in sql files
+vim.g.ftplugin_sql_omni_key = '<C-j>'
+
 -- vim.opt
 vim.opt.number = true
 

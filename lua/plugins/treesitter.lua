@@ -3,7 +3,7 @@ return {
     build = ':TSUpdate',
     opts = {
         highlight = { enable = true },
-        indent = { enable = true },
+        indent = { enable = true, disable = { 'html' } },
         auto_install = true,
     },
     config = function(_, opts)
