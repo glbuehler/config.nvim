@@ -24,6 +24,11 @@ require('lazy').setup({
         config = true,
     },
     {
+        'windwp/nvim-ts-autotag',
+        opts = {},
+        lazy = false,
+    },
+    {
         'folke/tokyonight.nvim',
         lazy = false,
     },
