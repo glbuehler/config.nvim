@@ -6,23 +6,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
-vim.api.nvim_create_autocmd('VimEnter', {
-    desc = 'Open netrw if no path specified',
-    group = vim.api.nvim_create_augroup('auto-netrw', { clear = true }),
-    callback = function()
-        if vim.fn.argc() == 0 then
-            vim.cmd('e .')
-        end
-    end,
-})
+local indent_override = {
+    html = 2,
+}
+
+local keys = {}
+for key, _ in pairs(indent_override) do
+    table.insert(keys, key)
+end
 
 vim.api.nvim_create_autocmd('FileType', {
-    desc = 'make html indentation work with html formatter',
-    group = vim.api.nvim_create_augroup('html-indent', { clear = true }),
-    pattern = 'html',
+    desc = 'indent level per file type',
+    group = vim.api.nvim_create_augroup('file-specific-indent', { clear = true }),
+    pattern = keys,
     callback = function()
-        require('nvim-treesitter')
-        vim.opt_local.indentexpr = 'nvim_treesitter#indent()-4'
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
     end,
 })
 
