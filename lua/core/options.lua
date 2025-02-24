@@ -31,6 +31,8 @@ vim.opt.scrolloff = 6
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+vim.opt.cursorline = true
+
 -- can increase startup time if not scheduled
 vim.schedule(function()
     vim.opt.clipboard = 'unnamedplus'
