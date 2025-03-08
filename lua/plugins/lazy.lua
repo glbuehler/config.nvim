@@ -6,6 +6,7 @@ require('lazy').setup({
     require('plugins.cmp'),
     require('plugins.conform'),
     require('plugins.gitsigns'),
+    require('plugins.harpoon'),
     require('plugins.lspconfig'),
     require('plugins.lualine'),
     require('plugins.mason'),
