@@ -5,10 +5,10 @@ return {
             -- lsps
             'lua-language-server',
             'rust_analyzer',
+            'html',
 
             -- formatters
             'stylua',
-            'html',
         },
     },
 }
